@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<VAST version="2.0">
+	<Ad id="62">
+		<InLine>
+			<AdSystem></AdSystem>
+			<AdTitle></AdTitle>
+			<Description></Description>
+			<Error></Error>
+			<Impression></Impression>
+			<Creatives>
+				<Creative AdID="62">
+					<Linear>
+						<Duration>00:00:15</Duration>
+						<TrackingEvents>
+							<Tracking event="creativeView"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdCreativeView/fcid=62]]>
+							</Tracking>
+							<Tracking event="start"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdStart/fcid=62]]>
+							</Tracking>
+							<Tracking event="firstQuartile"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdFirstQuartile/fcid=62]]>
+							</Tracking>
+							<Tracking event="midpoint"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdMidPoint/fcid=62]]>
+							</Tracking>
+							<Tracking event="thirdQuartile"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AThirdQuartile/fcid=62]]>
+							</Tracking>
+							<Tracking event="complete"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdComplete/fcid=62]]>
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickThrough>http://crtl.aimatch.com/live365/adclick/FCID=62/site=dev_live365/mp=p/a=0/g=0/g1=blues/g2=international/g3=college/s=brownphone09/ac=blues/len=15/random=0.43965047504752874</ClickThrough>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile delivery="progressive" type="application/x-shockwave-flash" bitrate="500" width="300" height="250" scalable="true" maintainAspectRatio="true"><![CDATA[http://ads.live365.com/sponsors/live365/2472_rma_pm_realppl_Aug11.swf]]></MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+				<Creative AdID="62-Companion">
+					<CompanionAds>
+						<Companion width="300" height="250">
+							<StaticResource creativeType="application/x-shockwave-flash"><![CDATA[http://ad.doubleclick.net/adi/N5398.sumworld.comOX14761/B6321802.12;sz=300x250;click=;ord=?]]></StaticResource>
+							<TrackingEvents>
+								<Tracking event="creativeView"><![CDATA[http://crtl.aimatch.com/live365/count/actname=vastcompanionimp/fcid=62]]></Tracking>
+							</TrackingEvents>
+							<CompanionClickThrough>http://crtl.aimatch.com/live365/adclick/FCID=62/site=dev_live365/mp=p/a=0/g=0/g1=blues/g2=international/g3=college/s=brownphone09/ac=blues/len=15/random=0.43965047504752874</CompanionClickThrough>
+						</Companion>
+					</CompanionAds>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+</VAST>
+

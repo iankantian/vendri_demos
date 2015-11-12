@@ -1,0 +1,29 @@
+#header {
+    background-color:#001E25;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#33cc33;
+    height:1000px;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#section {
+    /*width:350px;*/
+    background-color:#999999;
+    width:80%;
+    float:left;
+    padding:0px;
+    background: url(/assets/images/fluffy-bunny.jpg);
+}
+#footer {
+    background-color:#001E25;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}

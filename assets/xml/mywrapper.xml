@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="2.0">
+	<Ad id="sasiawrapper_859_">
+		<Wrapper>
+			<AdSystem></AdSystem>
+			<AdTitle></AdTitle>
+			<Description></Description>
+			<Error></Error>
+			<VASTAdTagURI><![CDATA[http://vendri.com/test/assets/googlevastflv.xml]]></VASTAdTagURI>
+			<Creatives>
+				<Creative>
+					<Linear>
+                                               <VideoClicks>
+                                                        <ClickTracking><![CDATA[http://testjeremy.com]]></ClickTracking>
+                                               </VideoClicks>
+						<TrackingEvents>
+							<Tracking event="creativeView"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdCreativeView/fcid=859]]></Tracking>
+							<Tracking event="start"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdStart/fcid=859]]></Tracking>
+							<Tracking event="midpoint"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdMidPoint/fcid=859]]></Tracking>
+							<Tracking event="firstQuartile"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdFirstQuartile/fcid=859]]></Tracking>
+							<Tracking event="thirdQuartile"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdThirdQuartile/fcid=859]]></Tracking>
+							<Tracking event="complete"><![CDATA[http://crtl.aimatch.com/live365/count/actname=AdComplete/fcid=859]]></Tracking>
+						</TrackingEvents>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</Wrapper>
+	</Ad>
+</VAST>

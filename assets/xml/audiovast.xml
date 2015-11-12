@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+<Ad id="AdswizzAd6036">
+  <InLine>
+   <AdSystem>Adswizz</AdSystem>
+   <AdTitle>UntitHome Depot WW_YHTFD22R4000led</AdTitle>
+   <Description>UntitHome Depot WW_YHTFD22R4000led</Description>
+   <!--<Impression id="6036"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsDisplayS…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=6668769]]></Impression>-->
+   <!--<Impression id="Adswizz3rdPartyImpression"><![CDATA[https://ad.doubleclick.net/ad/N7310.133069.DIALGLOBALINC/B8217728.110479293;sz=1x1;ord=1411908300092?]]></Impression>-->
+   <Creatives>
+    <Creative id="6036" sequence="1">
+     <Linear>
+      <Duration>00:00:30</Duration>
+      <VideoClicks>
+       <ClickThrough id="6036"><![CDATA[]]></ClickThrough>
+       <CustomClick id="6036"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsClicked&…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=8749056]]></CustomClick>
+      </VideoClicks>
+      <MediaFiles>
+          <MediaFile delivery="progressive" bitrate="800" width="640" height="480" type="audio/mpeg"><![CDATA[http://vendri.com/test/assets/home_depot.mp3]]></MediaFile>
+          <MediaFile delivery="progressive" bitrate="256000" width="1920" height="1080" type="audio/mpeg"><![CDATA[http://vendri.com/test/assets/home_depot.mp3]]></MediaFile>
+          <MediaFile delivery="progressive" bitrate="1200" width="30093" height="0" type="audio/mpeg"><![CDATA[http://vendri.com/test/assets/home_depot.mp3]]></MediaFile>
+          <MediaFile delivery="progressive" bitrate="1200" width="640" height="480" type="audio/mpeg"><![CDATA[http://vendri.com/test/assets/home_depot.mp3]]></MediaFile>
+      </MediaFiles>
+      <TrackingEvents>
+       <Tracking event="start"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsSendRepo…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=8110342]]></Tracking>
+       <Tracking event="firstQuartile"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsSendRepo…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=6365103]]></Tracking>
+       <Tracking event="midpoint"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsSendRepo…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=8292427]]></Tracking>
+       <Tracking event="thirdQuartile"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsSendRepo…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=5748191]]></Tracking>
+       <Tracking event="complete"><![CDATA[http://dialglobal.adswizz.com/www/delivery/swfIndex.php?reqType=AdsDisplayE…4c9bf2498085e5c0b9&listenerId=83558ddbd8a5abc02453f2e8ed234a92&cbs=5225812]]></Tracking>
+      </TrackingEvents>
+     </Linear>
+    </Creative>
+   </Creatives>
+   <Extensions>
+     <Extension type="AdServer">
+     <AdContext>fHA6MTk4MA==</AdContext>
+     </Extension>
+   </Extensions>
+  </InLine>
+ </Ad>
+ </VAST>
