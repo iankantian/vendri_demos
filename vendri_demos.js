@@ -3,76 +3,79 @@
  */
 
 // Global for timeline:
-var dateObject = new Date();
-var monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+//var date_Object = new Date();
+var date_Object = new Date("December 15, 2017 11:13:00");
+var month_Array = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
     "October", "November", "December"];
-var weekArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var days_of_week_Array = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var days_per_month_Array = ["31","28","31","30","31","30","31","31","30","31","30","31"];
+var timeline_cursor = 0;
+var number_Days = 30;
 
-/* Bring in the date and assign variables to it */
-function initTimeline(){
-    var timeChunks = 86400000; // milliseconds per chunk, I'm thinking a day long chunk
-    var numberChunks = 10; // how many chunks, I'm thinking 10
-    var endTime = numberChunks * timeChunks;
-    var futureDateObject = new Date(); // this one we'll edit.
-    //document.getElementById("month").innerHTML = monthArray[dateObject.getMonth()];
-    //only happens once a page load
-    populateTimeline(numberChunks, timeChunks);
-}
-
-// The function tha populates the timeline
-function populateTimeline(numberChunks, timeChunks){
-    var day_it = dateObject.getDate();
-    // now do the loop to populate time line
-    for( var i = 0; i<40; i++){
-        var row_days = document.getElementById("table_Days");
-        var x = row_days.insertCell(i);
-        if(i<31){
-            dateObject.setDate(i);
-        }
-        else {
-            i=1;
-            dateObject.setDate(i);
-        }
-        x.innerHTML=(dateObject.getDate()).toString();
+function leapyear_Check(){
+    if(date_Object.getFullYear()%4==0){
+        days_per_month_Array[1]=29;
+    }
+    else{
+        days_per_month_Array[1]=28;
     }
 }
 
-initTimeline();
+function populate_Timeline(){
+    leapyear_Check();
+    var day_timeline = date_Object.getDate();
+    var month_timeline = date_Object.getMonth();
+    var year_timeline = date_Object.getFullYear();
 
-/*
-// Set up!
-var a_canvas = document.getElementById("a");
-var context = a_canvas.getContext("2d");
+    var table = document.getElementById("timeline");
+    var row_days = table.insertRow(0); // adds a row to the first part of the row array, for me that's for "days"
+    var row_months = table.insertRow(1); // adds a row to the first part of the row array, for me that's for "days"
+    var row_years = table.insertRow(2); // adds a row to the first part of the row array, for me that's for "days"
 
-// Draw the face
-context.fillStyle = "yellow";
-context.beginPath();
-context.arc(95, 85, 40, 0, 2*Math.PI);
-context.closePath();
-context.fill();
-context.lineWidth = 2;
-context.stroke();
-context.fillStyle = "black";
+    // now do the loop to populate time line
+    for( var i = 0; i<number_Days; i++){
+        var cell_day= row_days.insertCell(i);
+        var cell_month=row_months.insertCell(i);
+        var cell_year= row_years.insertCell(i);
 
-// Draw the left eye
-context.beginPath();
-context.arc(75, 75, 5, 0, 2*Math.PI);
-context.closePath();
-context.fill();
+        cell_day.innerHTML = day_timeline.toString();
 
-// Draw the right eye
-context.beginPath();
-context.arc(114, 75, 5, 0, 2*Math.PI);
-context.closePath();
-context.fill();
+        if(i==0 || day_timeline==1) {
+            cell_month.innerHTML = month_Array[month_timeline];
+        }
+        else{}
+        if(i==0 || (month_timeline==0)&&day_timeline==1) {
+            cell_year.innerHTML = year_timeline.toString();
+        }
+        day_timeline++;
+        if (day_timeline > days_per_month_Array[month_timeline]) {
+            if(month_timeline<11) {
+                month_timeline++;
+            }
+            else{
+                year_timeline++;
+                month_timeline=0;
+            }
+            day_timeline = 1;
+        }
+    }
+    return number_Days;
+}
 
-// Draw the mouth
-context.beginPath();
-context.arc(95, 90, 25, Math.PI, 2*Math.PI, true);
-context.closePath();
-context.fill();
-
-// Write "Hello, World!"
-context.font = "30px Garamond";
-context.fillText("Hello, World!",15,175);
-    */
+var timeline_advance_event = setInterval(timeline_advance, 100);
+function timeline_advance() {
+    if (timeline_cursor < number_Days) {
+        document.getElementById("timeline").rows[0].cells[timeline_cursor].style.backgroundColor = "red";
+    }
+    else{
+        timeline_cursor=0;
+    }
+    if(timeline_cursor==0){
+        document.getElementById("timeline").rows[0].cells[number_Days-1].style.backgroundColor = "";
+        document.getElementById("timeline").rows[0].cells[0].style.backgroundColor = "red";
+    }
+    else{
+        document.getElementById("timeline").rows[0].cells[timeline_cursor-1].style.backgroundColor = "";
+    }
+    timeline_cursor++;
+}
