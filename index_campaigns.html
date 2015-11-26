@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!--<script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>-->
-    <script src="vendri_demos.js"></script>
+    <script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>
+    <script src="timeline.js"></script>
     <link rel="stylesheet" type="text/css" href="vendri_style.css">
+    <!--Need to use config "Vendri Video Above Timeline" to do this demo-->
 </head>
-<body>
+<body onload="populate_Timeline();">
 
 <div id="header">
     <h1>Campaign Management</h1>
@@ -22,10 +23,13 @@
     Frank<br>
 </div>
 
-<div id="timeline">
-<img src="/assets/images/campaignsketch.jpg" style="width:40%;height:35%;">
-
+<div id="campaign_demo_above_timeline">
 </div>
+
+<table id="timeline">
+</table>
+
+<div id="demo"></div>
 
 <div id="footer">
     Copyright © Vendri

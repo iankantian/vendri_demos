@@ -1,0 +1,165 @@
+{
+  "replace":false,                                    // with this Vendri won't put back whatever contents of whatever element it was sent to.
+  "width": 1000,                                      // you can directly modify the top level variables here... smaller scales but larger and the mediaDecider chooses the original size of the vast...
+  "height": 1000,                                     // you can directly modify...
+  "dti": 10,                                          ?
+  "pti": 10,                                          ?
+  "debug": true,                                      // when false it's in production and fires trackers
+  "adSkip": {                                         // object for configuring skip functions
+    "enabled": true,                                  // Whether or not you allow skipping
+    "duration": 2,                                    // Seconds until you can skip
+    "textBefore": "Hold on just {duration} seconds!", // Custom message while counting down
+    "textAfter": "Ok, back to you",                   // Custom message when skipping is OK
+    "sync": true                                      ?
+  },
+  "platforms": [
+    {
+      "PFID": 1,                                      // changing PFID here w/o PFID in "placements" too breaks delivery, 3 messages per attempt on console, console interprets the play object with this PFID at the top level, whereas the second PFID is part of a "placements" object
+      "target": "*",
+      "appId": false,
+      "type": "web",                                  // android, iOs, web, app, desktop, mobile, other
+      "setup": {},                                    // a setup object?  what's the capabilities here?
+      "enabled": true,                                // no effect
+      "PLIDs": [                                      // trying to modify both PLID's in "platforms" and "placements"...
+        1                                             // no effect on console output
+      ],
+      "name": "vendritester",
+      "id": "test1"
+    }
+  ],
+  "placements": [
+    {
+      "PLID": 1,                                      // modifying PLID in "placements" breaks playback
+      "PFID": 100,                                    // modifying PFID in "platforms" without "placements" too breaks it, 2 messages per attempt on console
+      "target": id of DOM element,                    // false or "*" works for Modal.
+      "type": "element",                              // "modal" is the default when somethings' wrong with "placements"
+      "setup": {},
+      "enabled": true,
+      "CPIDs": [
+        1
+      ],
+      "name": "vendrimodal",
+      "id": "test1"
+    }
+  ],
+  "campaigns": [
+    {
+      "CPID": 1,
+      "start": 1442901690805,                         // using Linux dates for milliseconds since Jan 1 1970, I don't see where the "end" date shows up in object... "end" and "stop" don't work in top level
+      "type": "ad",
+      "setup": {},
+      "enabled": true,
+      "data": {
+        "id": 0,
+        "updated": 0,
+        "avgs": {
+          "instancesPerSec": 0,
+          "callsPerIn": 0,
+          "impsPerCa": 0
+        },
+        "limits": {
+          "secs": 0,
+          "calls": 0,
+          "imps": 0
+        },
+        "state": {
+          "instances": 0,
+          "chosen": 0,
+          "calls": 0,
+          "imps": 0,
+          "secs": 0
+        }
+      },
+      "creatives": [
+        {
+          "id": 1,
+          "p": 1,
+          "t": 1442901690805,         // moving the t dates back to 1999, see if that breaks it... nope.
+          "updated": 0,
+          "avgs": {
+            "instancesPerSec": 0,
+            "callsPerIn": 0,
+            "impsPerCa": 0
+          },
+          "limits": {
+            "secs": 0,
+            "calls": 0,
+            "imps": 0
+          },
+          "state": {
+            "instances": 0,
+            "chosen": 0,
+            "calls": 0,
+            "imps": 0,
+            "secs": 0
+          }
+        },
+        {
+          "id": 3,
+          "p": 1,
+          "t": 1442901690805,
+          "updated": 0,
+          "avgs": {
+            "instancesPerSec": 0,
+            "callsPerIn": 0,
+            "impsPerCa": 0
+          },
+          "limits": {
+            "secs": 0,
+            "calls": 0,
+            "imps": 0
+          },
+          "state": {
+            "instances": 0,
+            "chosen": 0,
+            "calls": 0,
+            "imps": 0,
+            "secs": 0
+          }
+        }
+      ],
+      "name": "campaigntest",
+      "id": "test2"
+    }
+  ],
+  "creatives": {
+    "1": {
+      "CRID": 1,
+      "resource": "http://vendri.com/test/assets/myvastvideoad.xml",
+      "type": "vast",
+      "setup": {},
+      "enabled": true,
+      "name": "myvastvideoad",
+      "id": "test1"
+    },
+    "2": {
+      "CRID": 2,
+      "resource": "http://vendri.com/test/assets/audiovast.xml",
+      "type": "vast",
+      "setup": {},
+      "enabled": true,
+      "name": "myvastaudioad",
+      "id": "test2"
+    }
+  },
+  "triggers": [
+    {
+      "TRID": 1,
+      "PLIDs": [
+        1
+      ],
+      "action": "play",
+      "method": "watch",
+      "delay": 0,
+      "maxRuns": 2,
+      "time": 2,
+      "condition": {
+        "pageLoaded": true
+      },
+      "event": {
+        "name": "",
+        "target": ""
+      }
+    }
+  ]
+}

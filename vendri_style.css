@@ -13,21 +13,14 @@
     height:1000px;
     width:10%;
     float:left;
-    padding:5px;
-}
-#timeline {
-    /*width:350px;*/
-    background-color:#999999;
-    width:80%;
-    float:left;
-    padding:0px;
+    padding:0;
 }
 #left {
     /*width:350px;*/
     background-color:#777777;
     width:45%;
     float:left;
-    padding:0px;
+    padding:0;
 }
 #right {
     /*width:350px;*/
@@ -42,4 +35,14 @@
     clear:both;
     text-align:center;
     padding:5px;
+}
+canvas {
+    border: 5px dotted black;
+}
+#timeline {
+    /*width:350px;*/
+    background-color:#999999;
+    width:89%;
+    float:left;
+    padding:0;
 }
