@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <!--<script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>-->
     <script src='http://vendri.com/test/js/vendri_qa.min.js?PID=996&setup={
-  "theme":"dark",
   "dti": 10,
   "pti": 10,
   "debug": true,
   "adSkip": {
     "enabled": true,
-    "duration": 1,
-    "textBefore": "Hold on {duration} seconds",
+    "duration": 2,
+    "textBefore": "Hold on just {duration} seconds!",
     "textAfter": "Ok, back to you",
     "sync": true
   },
@@ -34,7 +33,7 @@
     {
       "PLID": 1,
       "PFID": 100,
-      "target":false,
+      "target": false,
       "type": "modal",
       "setup": {},
       "enabled": true,
@@ -48,7 +47,7 @@
   "campaigns": [
     {
       "CPID": 1,
-      "start": 1443598013753,
+      "start": 1442901690805,
       "type": "ad",
       "setup": {},
       "enabled": true,
@@ -61,7 +60,7 @@
           "impsPerCa": 0
         },
         "limits": {
-          "secs": 86400,
+          "secs": 0,
           "calls": 0,
           "imps": 0
         },
@@ -77,7 +76,7 @@
         {
           "id": 1,
           "p": 1,
-          "t": 1443598013753,
+          "t": 1442901690805,
           "updated": 0,
           "avgs": {
             "instancesPerSec": 0,
@@ -108,7 +107,7 @@
             "impsPerCa": 0
           },
           "limits": {
-            "secs": 3000000000,
+            "secs": 0,
             "calls": 0,
             "imps": 0
           },
@@ -155,7 +154,7 @@
       "method": "watch",
       "delay": 0,
       "maxRuns": 2,
-      "time": 1,
+      "time": 2,
       "condition": {
         "pageLoaded": true
       },
