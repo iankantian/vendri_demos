@@ -2,21 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!--<script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>-->
+    <script>var local_vendri;</script>
+    <script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>
     <script src="vendri_demos.js"></script>
     <link rel="stylesheet" type="text/css" href="vendri_style.css">
 </head>
 <body>
 
 <div id="header">
-    <h1>Contextual Creatives</h1>
+    <h1>Access</h1>
 </div>
 
 <div id="nav">
     <a href="index.html">Index</a><br>
     <a href="index_no_code.html">No Code!</a><br>
     <a href="index_campaigns.html">Campaigns</a><br>
-    <a href="index_context.html">Context</a><br>
+    <a href="index_map.html">Map</a><br>
     HTML<br>
     .JS<br>
     Frank<br>
@@ -24,8 +25,15 @@
 
 <div id="timeline">
 <img src="/assets/images/contextsketch.JPG" style="width:40%;height:35%;">
-
 </div>
+
+<script>
+    var timeline_advance_event = setInterval(see_log, 5000);
+
+    function see_log() {
+        //console.log("9001",local_vendri);
+    }
+</script>
 
 <div id="footer">
     Copyright © Vendri
