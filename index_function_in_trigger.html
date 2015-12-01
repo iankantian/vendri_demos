@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script>var local_vendri;</script>
     <script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>
     <script src="vendri_demos.js"></script>
     <link rel="stylesheet" type="text/css" href="vendri_style.css">
+    <!--Must use 'See Vendri Object Dashboard' configuration on managementsite-->
 </head>
 <body>
 
@@ -22,17 +22,35 @@
     .JS<br>
     Frank<br>
 </div>
+<div id="left">
+    <!--vendri targets here-->
+</div>
 
-<div id="demo">
-
+<div id="right">
 </div>
 
 <script>
-    var timeline_advance_event = setInterval(see_log, 5000);
-    function see_log() {
-        local_vendri.adSkip.duration=1;
-//        console.log("9001",local_vendri);
+    var timeline_advance_event = setInterval(client_log, 2000);
+    function client_log() {
+        var dom_string="";
+        var iter = 0;
+        try {
+            while(local_vendri.creatives[iter]!=undefined){
+                dom_string+= "Creative " + (iter+1) + ": " + local_vendri.creatives[iter].resource + ",  Time Left: " + parseInt(local_vendri.creatives[iter].limits.secs/86400, 10) + " days" + "<br>";
+                iter++;
+            }
+            var bob=iter.toString();
+        }
+        catch(err){
+            console.log("error: " + err + ".");
+            throw "Bork!";
+        }
+        document.getElementById("right").innerHTML=dom_string;
+//        console.log("9001");
+
     }
+
+
 </script>
 
 <div id="footer">

@@ -1,0 +1,36 @@
+<VAST version="2.0">
+    <Ad id="229">
+        <InLine>
+            <AdTitle><![CDATA[Josh Play VAST]]></AdTitle>
+            <Description><![CDATA[]]></Description>
+            <Creatives>
+                <Creative sequence="1" id="1">
+                    <Linear>
+                        <Duration>00:00:11</Duration>
+                        <TrackingEvents>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile delivery="progressive" bitrate="600" width="640" height="480" type="video/mp4"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/7969/me.mp4]]></MediaFile>
+                            <MediaFile delivery="progressive" bitrate="600" width="640" height="480" type="video/webm"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/7969/me.webm]]></MediaFile>
+                            <MediaFile delivery="progressive" bitrate="1024" width="640" height="480" type="video/mp4"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/7969/hi.mp4]]></MediaFile>
+                            <MediaFile delivery="progressive" bitrate="1024" width="640" height="480" type="video/webm"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/7969/hi.webm]]></MediaFile>
+                            <MediaFile delivery="progressive" bitrate="1024" width="640" height="480" type="video/x-flv"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/7969/hi.flv]]></MediaFile>
+                            <MediaFile delivery="progressive" bitrate="1024" width="640" height="360" type="video/x-ms-wmv"><![CDATA[http://cdn.liverail.com/adasset4/1331/229/7969/hi.wmv]]></MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+                <Creative sequence="1" id="1">
+                    <CompanionAds>
+                        <Companion width="300" height="250">
+                            <StaticResource creativeType="image/jpeg"><![CDATA[http://www.jeremytitus.com/assets/images300x250.jpg]]></StaticResource>
+                            <TrackingEvents>
+                            </TrackingEvents>
+                            <CompanionClickThrough><![CDATA[http:www.vendri.com]]></CompanionClickThrough>
+                        </Companion>
+                    </CompanionAds>
+                </Creative>
+            </Creatives>
+            <Extensions></Extensions>
+        </InLine>
+    </Ad>
+</VAST>
