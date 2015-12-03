@@ -18,14 +18,14 @@
 #left {
     /*width:350px;*/
     background-color:#777777;
-    width:45%;
+    width:40%;
     float:left;
     padding:0;
 }
 #right {
     /*width:350px;*/
     background-color:#666666;
-    width:44%;
+    width:40%;
     float:left;
     padding:0px;
 }
