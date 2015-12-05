@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>
+    <script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996">var local_vendri;</script>
     <script src="vendri_demos.js"></script>
     <link rel="stylesheet" type="text/css" href="vendri_style.css">
     <!--Must use 'See Vendri Object Dashboard' configuration on managementsite-->
@@ -18,12 +18,11 @@
     <a href="index_no_code.html">No Code!</a><br>
     <a href="index_campaigns.html">Campaigns</a><br>
     <a href="index_function_in_trigger.html">access_vendri_object</a><br>
-    HTML<br>
-    .JS<br>
-    Frank<br>
+    <a href="many_to_many.html">many to many</a><br>
 </div>
 <div id="left">
-    <!--vendri targets here-->
+    <div id="left_video_pane">
+    </div>
 </div>
 
 <div id="right">
@@ -36,7 +35,8 @@
         var iter = 0;
         try {
             while(local_vendri.creatives[iter]!=undefined){
-                dom_string+= "Creative " + (iter+1) + ": " + local_vendri.creatives[iter].resource + ",  Time Left: " + parseInt(local_vendri.creatives[iter].limits.secs/86400, 10) + " days" + "<br>";
+                dom_string+= "Creative " + (iter+1) + ": " + local_vendri.creatives[iter].resource + ",  Time Left: " + parseInt(local_vendri.creatives[iter].limits.secs/86400, 10) + " days";
+                dom_string+= "\n";
                 iter++;
             }
             var bob=iter.toString();
@@ -45,7 +45,7 @@
             console.log("error: " + err + ".");
             throw "Bork!";
         }
-        document.getElementById("right").innerHTML=dom_string;
+        document.getElementById("right").innerText=dom_string;
 //        console.log("9001");
 
     }

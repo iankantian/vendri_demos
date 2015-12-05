@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!--<script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>-->
+    <script src="http://vendri.com/test/js/vendri_qa.min.js?PID=996"></script>
     <script src="timeline.js"></script>
     <link rel="stylesheet" type="text/css" href="vendri_style.css">
     <!--Need to use config "Vendri Video Above Timeline" to do this demo-->
@@ -18,9 +18,8 @@
     <a href="index_no_code.html">No Code!</a><br>
     <a href="index_campaigns.html">Campaigns</a><br>
     <a href="index_function_in_trigger.html">Map</a><br>
-    HTML<br>
-    .JS<br>
-    Frank<br>
+    <a href="many_to_many.html">many to many</a><br>
+    <input id="play-button" type="button" value="Go Demo!"/><br>
 </div>
 
 <div id="campaign_demo_above_timeline">
@@ -29,6 +28,20 @@
     <video width="568" controls><source src="/assets/media/What_is_THAT.mp4" type="video/mp4"></video>
     <video width="568" controls><source src="/assets/media/Only_British.mp4" type="video/mp4"></video>
 </div>
+
+<script>
+    var josh_go=false;
+    // bind events
+    var playButton = document.getElementById("play-button");
+    playButton.addEventListener("click", function() {
+        if(josh_go==true){
+            josh_go=false;
+        }
+        else{ josh_go=true;}
+    });
+</script>
+
+
 
 <table id="timeline">
 </table>

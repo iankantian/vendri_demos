@@ -1,0 +1,144 @@
+{
+  "result": {
+    "_id": "5662020ab4944f17770c3124",
+    "user_id": "55a6034ab4944f635765f9af",
+    "config": {
+      "width": 640,
+      "height": 420,
+      "minWidth": 300,
+      "minHeight": 34,
+      "retry": 0,
+      "theme": "light",
+      "volume": 0.7,
+      "controls": {
+        "play": true,
+        "volume": true,
+        "mute": true,
+        "progress": true
+      },
+      "triggers": [
+        {
+          "PLID": "1,2",
+          "method": "watch",
+          "action": "play",
+          "condition": "function(e,f){local_vendri=f; return true;}",
+          "maxRuns": 0,
+          "time": 1,
+          "event": {
+            "name": "",
+            "target": ""
+          }
+        }
+      ],
+      "events": [
+        {
+          "name": "adStarted",
+          "callback": ""
+        }
+      ],
+      "platforms": [
+        {
+          "id": 1,
+          "name": 1,
+          "target": "http:\/\/joshuabrown.com\/many_to_many.html",
+          "type": "web"
+        },
+        {
+          "id": 2,
+          "name": "diditstick",
+          "target": "http:\/\/joshuabrown.com\/index_no_code.html",
+          "type": "web"
+        }
+      ],
+      "placements": [
+        {
+          "PFID": 1,
+          "id": 1,
+          "name": 1,
+          "target": "left_video_pane",
+          "type": "element"
+        },
+        {
+          "PFID": 2,
+          "id": 2,
+          "name": "diditstick",
+          "target": "left_video_pane",
+          "type": "element"
+        }
+      ],
+      "campaigns": [
+        {
+          "PLID": 1,
+          "id": 1,
+          "name": 1,
+          "start": "2015-12-03T13:14",
+          "end": "",
+          "imps": 0
+        },
+        {
+          "PLID": 2,
+          "id": 2,
+          "name": 2,
+          "start": "2015-12-03T13:16",
+          "end": "",
+          "imps": 0
+        }
+      ],
+      "creatives": {
+        "0": {
+          "CPID": 1,
+          "id": 1,
+          "name": 1,
+          "resource": "\/assets\/xml\/josh_test.xml",
+          "type": "vast",
+          "p": 0,
+          "imps": 0
+        },
+        "1": {
+          "CPID": 2,
+          "id": 2,
+          "name": 2,
+          "resource": "<video width=\"640\" height=\"320\"autoplay controls muted><source src=\"\/assets\/media\/press_pour.mp4\" type\"\/video\/mp4\">No HTML5!<\/video>",
+          "type": "html",
+          "p": 0,
+          "imps": 0
+        },
+        "2": {
+          "CPID": 3,
+          "id": 3,
+          "name": "side by side youtube",
+          "resource": "<div id=\"left\">     Vendri does it:<br>     <div id=\"left_video_pane\">         <!--No Code Playing of video here by Vendri! -->     <\/div>     <br>     <h2>  Code Required to play with Vendri:<\/h2>     <br>     <pre>      <\/pre> <\/div><div id=\"right\">     Youtube does it:<br>     <div id=\"right_video_pane\">         <iframe width=100% height=\"320\" src=\"\/\/www.youtube.com\/embed\/wujiz8Q_-ZU?enablejsapi=1\" frameborder=\"0\" allowfullscreen id=\"video\"><\/iframe>         <script>             var josh_go=false;              \/\/ Inject YouTube API script             var tag = document.createElement('script');             tag.src = \"\/\/www.youtube.com\/player_api\";             var firstScriptTag = document.getElementsByTagName('script')[0];             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);              var player;              function onYouTubePlayerAPIReady() {                 \/\/ create the global player from the specific iframe (#video)                 player = new YT.Player('video', {                     events: {                         \/\/ call this function when player is ready to use                         'onReady': onPlayerReady                     }                 });             }              function onPlayerReady(event) {                  \/\/ bind events                 var playButton = document.getElementById(\"play-button\");                 playButton.addEventListener(\"click\", function() {                     player.playVideo();                     player.mute();                     if(josh_go==true){                         josh_go=false;                     }                     else{ josh_go=true;}                 });                  var pauseButton = document.getElementById(\"pause-button\");                 pauseButton.addEventListener(\"click\", function() {                     player.pauseVideo();                 });              }         <\/script>     <\/div>     <br>     <h2>  Code Required to run Youtube:<\/h2>     <br>     <pre>     &lt;!-- 1. The &lt;iframe> (and video player) will replace this &lt;div> tag. -->         &lt;div id=\"player\">&lt;\/div>          &lt;script>             \/\/ 2. This code loads the IFrame Player API code asynchronously.             var tag = document.createElement('script');              tag.src = \"https:\/\/www.youtube.com\/iframe_api\";             var firstScriptTag = document.getElementsByTagName('script')[0];             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);              \/\/ 3. This function creates an &lt;iframe> (and YouTube player)             \/\/    after the API code downloads.             var player;             function onYouTubeIframeAPIReady() {                 player = new YT.Player('player', {                     height: '320',                     width: '640',                     videoId: 'wujiz8Q_-ZU',                     events: {                         'onReady': onPlayerReady,                         'onStateChange': onPlayerStateChange                     }                 });             }              \/\/ 4. The API will call this function when the video player is ready.             function onPlayerReady(event) {                 event.target.playVideo();             }              \/\/ 5. The API calls this function when the player's state changes.             \/\/    The function indicates that when playing a video (state=1),             \/\/    the player should play for six seconds and then stop.             var done = false;             function onPlayerStateChange(event) {                 if (event.data == YT.PlayerState.PLAYING && !done) {                     setTimeout(stopVideo, 48000);                     done = true;                 }             }             function stopVideo() {                 player.stopVideo();             }         &lt;\/script>     <\/pre> <\/div>",
+          "type": "html",
+          "p": 0,
+          "imps": 0
+        },
+        "4": {
+          "CPID": 5,
+          "id": 5,
+          "name": "header text",
+          "resource": "<h1>Vendri Demos!<\/h1>",
+          "type": "html",
+          "p": 0,
+          "imps": 0
+        }
+      },
+      "debug": true,
+      "constraints": {
+        "startTime": 3,
+        "playTime": false
+      },
+      "adSkip": {
+        "duration": 2,
+        "textBefore": "You can skip this ad in {duration}",
+        "textAfter": "Skip now",
+        "sync": true,
+        "enabled": false
+      },
+      "audioClickthrough": false
+    },
+    "name": "Many to Many Clone Did it Stick",
+    "isLive": true,
+    "updated_at": "2015-12-04 23:55:25",
+    "created_at": "2015-12-04 21:13:46"
+  }
+}
