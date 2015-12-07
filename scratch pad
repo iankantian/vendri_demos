@@ -1,0 +1,5 @@
+pageLoaded
+
+function(){console.log("jeremy", window.josh_go);return window.josh_go;}  // a callback pulled out of Map 2 on Vendri Demo Master, still works!
+When we want to have something happen via Vendri we need a trigger for it!  e.g. Trigger 1 populates the page elements
+Trigger 2 triggers the side by side video play.
