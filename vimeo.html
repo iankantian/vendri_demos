@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Other</title>
+    <!--<script src="https://f.vimeocdn.com/p/2.10.3/js/player.js"></script>-->
+    <!--Required for Vimeo:-->
+    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+</head>
+<body>
+<iframe id="vimeo_video" src="https://player.vimeo.com/video/148288490?api=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<br>
+<button id="play-button">Play!</button>
+<button id="pause-button">Pause...</button>
+<script>
+    var iframe = document.getElementById('vimeo_video');
+
+    // $f == Froogaloop
+    var vimeo_player = $f(iframe);
+
+    var playButton = document.getElementById("play-button");
+    playButton.addEventListener("click", function() {
+        vimeo_player.api("play");
+        vimeo_player.api(setVolume(0));
+    });
+
+    var pauseButton = document.getElementById("pause-button");
+    pauseButton.addEventListener("click", function() {
+        vimeo_player.api("pause");
+    });
+</script>
+
+
+</body>
+</html>
