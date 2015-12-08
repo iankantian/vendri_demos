@@ -6,14 +6,14 @@
             <Creatives>
                 <Creative sequence="1" id="1">
                     <Linear>
-                        <Duration>00:00:11</Duration>
+                        <Duration>00:08</Duration>
                         <TrackingEvents>
                         </TrackingEvents>
                         <MediaFiles>
-                            <MediaFile delivery="progressive" bitrate="1000" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour.mp4]]></MediaFile>
-                            <MediaFile delivery="progressive" bitrate="200" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour_720.mov]]></MediaFile>1<!--<MediaFile delivery="progressive" bitrate="2000" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour_480.mp4]]></MediaFile>-->
-                            <MediaFile delivery="progressive" bitrate="150" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour_mobile.m4v]]></MediaFile>
-                            <MediaFile delivery="progressive" bitrate="50" width="1280" height="720" type="audio/mp4"><![CDATA[/assets/media/press_pour_Audio.m4a]]></MediaFile>
+                            <MediaFile id="1" delivery="progressive" bitrate="1000" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour.mp4]]></MediaFile>
+                            <MediaFile id="2" delivery="progressive" bitrate="200" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour_720.mov]]></MediaFile>1<!--<MediaFile delivery="progressive" bitrate="2000" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour_480.mp4]]></MediaFile>-->
+                            <MediaFile id="3" delivery="progressive" bitrate="150" width="1280" height="720" type="video/mp4"><![CDATA[/assets/media/press_pour_mobile.m4v]]></MediaFile>
+                            <MediaFile id="4" delivery="progressive" bitrate="50" width="1280" height="720" type="audio/mp4"><![CDATA[/assets/media/press_pour_Audio.m4a]]></MediaFile>
                         </MediaFiles>
                     </Linear>
                 </Creative>
