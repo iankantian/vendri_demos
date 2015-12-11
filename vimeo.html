@@ -20,8 +20,8 @@
 
     var playButton = document.getElementById("play-button");
     playButton.addEventListener("click", function() {
-        vimeo_player.api("play");
-        vimeo_player.api(setVolume(0));
+        vimeo_player.api('play');
+        vimeo_player.api('setVolume', 0)
     });
 
     var pauseButton = document.getElementById("pause-button");
